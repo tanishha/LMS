@@ -1,0 +1,42 @@
+.logo {
+  height: 38.78px;
+  margin-top: 9px;
+  margin-bottom: 16px;
+  background: url("../../../public/assets/images/logo.png");
+}
+.site-layout-sub-header-background {
+  background: #219f94;
+  height: 72px;
+  position: "fixed";
+  margin-left: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+.heading {
+  margin-left: 300px;
+  text-align: "center";
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+}
+.sidebar {
+  background-color: #f9f9f9;
+}
+.customclass {
+  color: #219f94;
+  font-weight: bold;
+  text-shadow: #219f94;
+  font-size: large;
+}
+.customclassItem {
+  color: #219f94;
+  font-weight: bold;
+  text-shadow: #219f94;
+  font-size: 14px;
+}
+.site-layout-background {
+  background: #fff;
+}
+[data-theme="dark"] .site-layout-sub-header-background {
+  background: #141414;
+}
