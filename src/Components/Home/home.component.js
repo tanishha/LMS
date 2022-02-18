@@ -3,26 +3,66 @@ import "./home.component.css";
 import {
   Image,
   Button,
-  Card,
+  Carousel,
   Collapse,
   Space,
   Typography,
   Divider,
 } from "antd";
 import { MailFilled, SkypeFilled } from "@ant-design/icons";
+import { Skeleton, Card, Avatar } from "antd";
+import {
+  EditOutlined,
+  EllipsisOutlined,
+  SettingOutlined,
+} from "@ant-design/icons";
+
+const { Meta } = Card;
 const { Panel } = Collapse;
 
 function HomeComponent() {
   const [description] = React.useState({
-    name: "John Doe",
+    name: "Name Surname",
     designation: "Intern",
     email: "john.doe@lisnepal.com.np",
     skypeid: "live:.qwe.ui11q03d345",
     projectName: "LMS",
     role: "Developer",
   });
+  const [event] = React.useState(
+    {
+      name: "Picnic",
+      date: "2078-11-15",
+      location: "Godawari",
+    },
+    {
+      name: "Lunch",
+      date: "2078-11-21",
+      location: "Canteen",
+    }
+  );
+  const [trainings] = React.useState(
+    {
+      name: "Picnic",
+      date: "2078-11-15",
+      location: "Godawari",
+    },
+    {
+      name: "Lunch",
+      date: "2078-11-21",
+      location: "Canteen",
+    }
+  );
+  const contentStyle = {
+    height: "160px",
+    color: "#fff",
+    lineHeight: "160px",
+    textAlign: "center",
+    background: "#219F94",
+    marginTop: "20px",
+  };
   const [flag, setFlag] = React.useState(true);
-  let content = flag ? "THIS IS EVENT" : "trjnfsk";
+  let content = flag ? "Events" : "TRAININGS";
   return (
     <>
       <div style={{ display: "flex", flexDirection: "row" }}>
@@ -58,7 +98,7 @@ function HomeComponent() {
           <Image
             width={200}
             src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-            style={{ borderRadius: "50%", zindex: 1000 }}
+            style={{ borderRadius: "50%" }}
           />
           <br />
           <Button
@@ -92,29 +132,52 @@ function HomeComponent() {
       <br />
       <Space split={<Divider type="vertical" style={{ fontSize: "50px" }} />}>
         <Typography.Link
-          style={{
-            fontSize: "30px",
-            fontWeight: "bold",
-            color: "#219f94",
-          }}
+          style={
+            flag
+              ? {
+                  fontSize: "30px",
+                  fontWeight: "bold",
+                  color: "#219f94",
+                  textDecoration: "underline",
+                }
+              : { fontSize: "30px", fontWeight: "bold", color: "#219f94" }
+          }
           onClick={() => setFlag(true)}
         >
           {" "}
           Upcoming Events
         </Typography.Link>
         <Typography.Link
-          style={{
-            fontSize: "30px",
-            fontWeight: "bold",
-            color: "#219f94",
-          }}
+          style={
+            flag
+              ? { fontSize: "30px", fontWeight: "bold", color: "#219f94" }
+              : {
+                  fontSize: "30px",
+                  fontWeight: "bold",
+                  color: "#219f94",
+                  textDecoration: "underline",
+                }
+          }
           onClick={() => setFlag(false)}
         >
           {" "}
           Upcoming Trainings
         </Typography.Link>
       </Space>
-      <div> {content}</div>
+      <Carousel effect="fade">
+        <div>
+          <h3 style={contentStyle}>
+            {" "}
+            <div
+              className="site-card-border-less-wrapper"
+              style={contentStyle}
+            ></div>
+          </h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>{content}</h3>
+        </div>
+      </Carousel>
       <br />
       <hr />
       <br />

@@ -1,0 +1,28 @@
+.table-striped-rows thead > tr > th {
+  color: #219f94;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.table-striped-rows td {
+  font-size: 18px;
+}
+
+.ant-modal-title {
+  color: #219f94;
+  font-size: 24px;
+  font-weight: bold;
+}
+.ant-modal-header {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.ant-modal-content {
+  border-radius: 20px;
+}
+
+.ant-form-item-label label {
+  color: #219f94;
+  font-size: 20px;
+  margin-right: 100px;
+}

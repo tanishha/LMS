@@ -1,10 +1,11 @@
 import React from "react";
 import "./container.component.css";
+import { Link } from "react-router-dom";
 
 import { Layout, Menu } from "antd";
 
 const { Sider } = Layout;
-const { SubMenu, Item } = Menu;
+const { Item } = Menu;
 
 function SidebarComponent() {
   return (
@@ -17,23 +18,20 @@ function SidebarComponent() {
         }}
         breakpoint="lg"
         collapsedWidth="0"
-        onBreakpoint={(broken) => {
-          console.log(broken);
-        }}
-        onCollapse={(collapsed, type) => {
-          console.log(collapsed, type);
-        }}
+        onBreakpoint={(broken) => {}}
+        onCollapse={(collapsed, type) => {}}
       >
         <div className="logo" />
         <Menu className="sidebar" mode="inline" defaultSelectedKeys={["1"]}>
-          <Item key="1" className="customclass">
-            Home
-          </Item>
-          <SubMenu key="sub1" title="LineDetails" className="customclass">
-            <Item key="2" className="customclassItem">
-              Training Line Profile
+         
+            {" "}
+            <Item key="1" className="customclass">
+            <Link to="/"> Home </Link>
             </Item>
-          </SubMenu>
+         
+          <Item key="2" className="customclass">
+          <Link to="/line"> Line Details</Link>
+          </Item>
           <Item key="3" className="customclass">
             Line Events
           </Item>
