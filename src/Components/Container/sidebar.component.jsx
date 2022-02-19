@@ -23,14 +23,12 @@ function SidebarComponent() {
       >
         <div className="logo" />
         <Menu className="sidebar" mode="inline" defaultSelectedKeys={["1"]}>
-         
-            {" "}
-            <Item key="1" className="customclass">
+          {" "}
+          <Item key="1" className="customclass">
             <Link to="/"> Home </Link>
-            </Item>
-         
+          </Item>
           <Item key="2" className="customclass">
-          <Link to="/line"> Line Details</Link>
+            <Link to="/line"> Line Details</Link>
           </Item>
           <Item key="3" className="customclass">
             Line Events

@@ -9,7 +9,7 @@ function TopHeader() {
     <>
       <Header
         className="site-layout-sub-header-background"
-        style={{ position: "fixed", height: "68.5px",zindex:1000 }}
+        style={{ position: "fixed", height: "68.5px", zindex: 1000 }}
       >
         {" "}
         <div className="heading">LIS Nepal Line Management System</div>

@@ -26,3 +26,15 @@
   font-size: 20px;
   margin-right: 100px;
 }
+.displayTag {
+  font-size: 26px;
+  color: #323232;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.displayTagData {
+  font-size: 26px;
+  color: #219f94;
+  margin-right: 10px;
+}

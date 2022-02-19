@@ -27,7 +27,7 @@ function App() {
                   <Route exact path="/" element={<HomeComponent />} />
                   <Route path="/line" element={<LineComponent />} />
                   <Route path="/line" element={<LineComponent />} />
-                  <Route path="/training" element={<TrainingComponent />} />
+                  <Route path="/training/:id" element={<TrainingComponent />} />
                 </Routes>
               </div>
             </Content>

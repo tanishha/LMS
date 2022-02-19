@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
 import { DatePicker, Modal, Button, Form } from "antd";
-import { PlusOutlined } from "@ant-design/icons";
-import InputComponent from "./input";
-import DropdownComponent from "./employeeDropdown";
+import InputComponent from "../input";
+import DropdownComponent from "../employeeDropdown";
 
 const formItemLayout = {
   labelCol: {
@@ -35,7 +34,7 @@ const tailFormItemLayout = {
     },
   },
 };
-function AddLine() {
+function EditLine() {
   const [form] = Form.useForm();
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
@@ -64,7 +63,6 @@ function AddLine() {
   return (
     <>
       <Button
-        icon={<PlusOutlined />}
         style={{
           float: "right",
           borderRadius: "15px",
@@ -73,7 +71,7 @@ function AddLine() {
         }}
         onClick={showModal}
       >
-        New Line
+        Edit
       </Button>
       <Modal
         title="Create New Line"
@@ -120,7 +118,7 @@ function AddLine() {
             rules={[
               {
                 required: true,
-                message: "Please choose Line Head",
+                message: "Please enter Line Head",
               },
             ]}
           >
@@ -132,7 +130,7 @@ function AddLine() {
             rules={[
               {
                 required: true,
-                message: "Please choose Deputy Line Head",
+                message: "Please enter Deputy Line Head",
               },
             ]}
           >
@@ -144,7 +142,7 @@ function AddLine() {
             rules={[
               {
                 required: true,
-                message: "Please choose Line Manager",
+                message: "Please enter Line Manager",
               },
             ]}
           >
@@ -183,4 +181,4 @@ function AddLine() {
   );
 }
 
-export default AddLine;
+export default EditLine;

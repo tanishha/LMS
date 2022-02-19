@@ -1,11 +1,12 @@
 .code-box-demo p {
-    margin: 0;
-  }
-  .ant-card { margin-bottom: 30px; }
+  margin: 0;
+}
+.ant-card {
+  margin-bottom: 30px;
+}
 
-  .site-card-border-less-wrapper {
-    padding: 30px;
-    background: #ececec;
-    margin-left:500px
-  }
-   
+.site-card-border-less-wrapper {
+  padding: 30px;
+  background: #ececec;
+  margin-left: 500px;
+}

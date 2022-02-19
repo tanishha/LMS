@@ -4,6 +4,7 @@ import { Typography, Table, Tag } from "antd";
 import "./line.component.css";
 import AddLine from "../../Utils/LinePage/addLine";
 import SearchComponent from "../../Utils/LinePage/search";
+import { Link } from "react-router-dom";
 
 const { Title } = Typography;
 
@@ -13,7 +14,14 @@ function LineComponent() {
       title: "Line Name",
       dataIndex: "lineName",
       key: "lineName",
-      render: (text) => <a>{text}</a>,
+      render: (text, record) => (
+        <Link
+          to={{ pathname: `/training/${record.lineCode}` }}
+          state={{ data: record }}
+        >
+          {text}
+        </Link>
+      ),
     },
     {
       title: "Line Head",
@@ -52,6 +60,7 @@ function LineComponent() {
       lineName: "LMS",
       lineHead: "Pawan Shrestha",
       lineManager: "Yugesh Shrestha",
+      deputyLineHead: "Ramesh Kunwar",
       startDate: "2078-10-11",
       linedivision: ["PoolA", "PoolB"],
       lineCode: "001",
@@ -62,6 +71,7 @@ function LineComponent() {
       lineName: "Robling",
       lineHead: "Mrigesh Raj Shrestha",
       lineManager: "Rojina Tuladhar",
+      deputyLineHead: "Ramesh Kunwar",
       startDate: "2078-10-10",
       linedivision: ["Interns", "Trainees"],
       lineCode: "001",
@@ -77,7 +87,7 @@ function LineComponent() {
         </Title>
         <AddLine />
       </div>
-    <SearchComponent/>
+      <SearchComponent title="Search Line Name" />
       <Table
         className="table-striped-rows"
         columns={columns}

@@ -1,9 +1,24 @@
 import React from "react";
-import { Input } from "antd";
-const { Search } = Input;
+import {
+  Input
+} from "antd";
+const {
+  Search
+} = Input;
 
-function SearchComponent() {
-  return <Search placeholder="Search Line Name" allowClear style={{ width: 200 ,float:'right',marginBottom:"10px",color:"red"}}/>
+function SearchComponent(props) {
+  return <Search placeholder = {
+    props.title
+  }
+  allowClear style = {
+    {
+      width: 200,
+      float: 'right',
+      marginBottom: "10px",
+      color: "red"
+    }
+  }
+  />
 
 }
 
